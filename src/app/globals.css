@@ -1,26 +1,89 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-playfair);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* ====== AURORA BACKGROUND ====== */
+:is(.dark *) .aurora-bg {
+  mix-blend-mode: screen;
+}
+
+.aurora-blob {
+  position: absolute;
+  /* Reduced blur for a sharper, more defined wave */
+  filter: blur(50px) saturate(160%);
+  opacity: 0.7;
+  border-radius: 50%;
+}
+
+/* Light mode aurora colors — use deeper, slightly more opaque colors so they show up on white */
+.aurora-blob-1 {
+  width: 160vw;
+  height: 40vh;
+  top: -20vh;
+  left: -30vw;
+  background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.4) 0%, rgba(99, 102, 241, 0.15) 40%, transparent 70%);
+  animation: wave-1 12s infinite linear;
+}
+.aurora-blob-2 {
+  width: 140vw;
+  height: 50vh;
+  bottom: -30vh;
+  right: -20vw;
+  background: radial-gradient(ellipse at center, rgba(139, 92, 246, 0.3) 0%, rgba(139, 92, 246, 0.1) 40%, transparent 70%);
+  animation: wave-2 15s infinite linear;
+}
+.aurora-blob-3 {
+  width: 200vw;
+  height: 35vh;
+  bottom: 10vh;
+  left: -50vw;
+  background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.35) 0%, rgba(59, 130, 246, 0.1) 40%, transparent 70%);
+  animation: wave-3 10s infinite linear;
+}
+
+/* Dark mode aurora colors — deep, vivid nebula */
+:is(.dark *) .aurora-blob-1 {
+  background: radial-gradient(ellipse at center, rgba(67, 56, 202, 0.7) 0%, rgba(67, 56, 202, 0.25) 40%, transparent 70%);
+}
+:is(.dark *) .aurora-blob-2 {
+  background: radial-gradient(ellipse at center, rgba(109, 40, 217, 0.6) 0%, rgba(109, 40, 217, 0.25) 40%, transparent 70%);
+}
+:is(.dark *) .aurora-blob-3 {
+  background: radial-gradient(ellipse at center, rgba(37, 99, 235, 0.55) 0%, rgba(37, 99, 235, 0.2) 35%, transparent 70%);
+}
+
+@keyframes wave-1 {
+  0% { transform: translate(0vw, 0vh) rotate(0deg) scale(1.2); }
+  33% { transform: translate(40vw, 20vh) rotate(35deg) scale(1); }
+  66% { transform: translate(-20vw, 35vh) rotate(-15deg) scale(1.3); }
+  100% { transform: translate(0vw, 0vh) rotate(0deg) scale(1.2); }
+}
+
+@keyframes wave-2 {
+  0% { transform: translate(0vw, 0vh) rotate(0deg) scale(1.1); }
+  33% { transform: translate(-50vw, -25vh) rotate(-30deg) scale(1.4); }
+  66% { transform: translate(30vw, -40vh) rotate(20deg) scale(1); }
+  100% { transform: translate(0vw, 0vh) rotate(0deg) scale(1.1); }
+}
+
+@keyframes wave-3 {
+  0% { transform: translate(0vw, 0vh) rotate(0deg) scale(1); }
+  50% { transform: translate(70vw, -50vh) rotate(45deg) scale(1.2); }
+  100% { transform: translate(0vw, 0vh) rotate(0deg) scale(1); }
 }
