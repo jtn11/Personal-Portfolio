@@ -26,8 +26,8 @@ body {
 .aurora-blob {
   position: absolute;
   /* Reduced blur for a sharper, more defined wave */
-  filter: blur(50px) saturate(160%);
-  opacity: 0.7;
+  filter: blur(25px) saturate(200%);
+  opacity: 0.8;
   border-radius: 50%;
 }
 
@@ -59,13 +59,13 @@ body {
 
 /* Dark mode aurora colors — deep, vivid nebula */
 :is(.dark *) .aurora-blob-1 {
-  background: radial-gradient(ellipse at center, rgba(67, 56, 202, 0.7) 0%, rgba(67, 56, 202, 0.25) 40%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(49, 46, 129, 0.9) 0%, rgba(49, 46, 129, 0.5) 30%, transparent 60%);
 }
 :is(.dark *) .aurora-blob-2 {
-  background: radial-gradient(ellipse at center, rgba(109, 40, 217, 0.6) 0%, rgba(109, 40, 217, 0.25) 40%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(88, 28, 135, 0.9) 0%, rgba(88, 28, 135, 0.5) 30%, transparent 60%);
 }
 :is(.dark *) .aurora-blob-3 {
-  background: radial-gradient(ellipse at center, rgba(37, 99, 235, 0.55) 0%, rgba(37, 99, 235, 0.2) 35%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(30, 58, 138, 0.8) 0%, rgba(30, 58, 138, 0.45) 25%, transparent 60%);
 }
 
 @keyframes wave-1 {
