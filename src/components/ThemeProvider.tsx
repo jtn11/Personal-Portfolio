@@ -1,7 +1,7 @@
 "use client";
 
 import { ThemeProvider as NextThemesProvider } from "next-themes";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 // Mute the benign React 19 dev warning caused by next-themes injecting a script tag.
 // This prevents Next.js 15 from throwing a full-screen red error overlay.
@@ -16,16 +16,6 @@ if (typeof window !== "undefined") {
 }
 
 export function ThemeProvider({ children, ...props }: any) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return <>{children}</>;
-  }
-
   return (
     <NextThemesProvider attribute="class" defaultTheme="dark" enableSystem={false} {...props}>
       {children}

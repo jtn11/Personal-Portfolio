@@ -14,7 +14,7 @@ const projects = [
       "Built an AI-powered engine using Next.js and LLM APIs to evaluate resumes against job descriptions using structured JSON.",
       "Developed a full-stack system utilizing Firebase Firestore for persistent analysis history and real-time UI updates."
     ],
-    github: "#",
+    github: "https://github.com/jtn11/TailorAI",
     color: "from-blue-500/20 to-transparent",
     border: "group-hover:border-blue-500/50"
   },
@@ -27,7 +27,7 @@ const projects = [
       "Engineered a real-time speech translation application leveraging Groq's Whisper API to transcribe and translate Hindi audio to English text.",
       "Implemented robust asynchronous API handling using FormData and MediaRecorder API to capture high-quality audio streams."
     ],
-    github: "#",
+    github: "https://github.com/jtn11/AI-Translation",
     color: "from-purple-500/20 to-transparent",
     border: "group-hover:border-purple-500/50"
   },
@@ -40,7 +40,7 @@ const projects = [
       "Built a collaborative productivity platform using Next.js and TypeScript, enabling real-time task synchronization across multiple user workspaces.",
       "Integrated a secure authentication system and Firebase Firestore backend to manage complex data relations and scalable user assignments."
     ],
-    github: "#",
+    github: "https://github.com/jtn11/TaskNest",
     color: "from-emerald-500/20 to-transparent",
     border: "group-hover:border-emerald-500/50"
   },
@@ -54,9 +54,35 @@ const projects = [
       "Built a FastAPI backend for document ingestion, text extraction, chunking, and persistent vector storage using ChromaDB.",
       "Implemented semantic search for accuracy and integrated Groq LLM for strictly grounded answer generation."
     ],
-    github: "#",
+    github: "https://github.com/jtn11/RAG-Based-AI-Chatbot",
     color: "from-rose-500/20 to-transparent",
     border: "group-hover:border-rose-500/50"
+  },
+  {
+    title: "Resume Intelligence API",
+    subtitle: "AI REST API Service",
+    date: "Jan 2026",
+    tech: ["Node.js", "TypeScript", "Groq LLM", "REST API", "Render"],
+    points: [
+      "Built a scalable Node.js and TypeScript REST API utilizing clean architecture and factory patterns to decouple business logic from LLM providers.",
+      "Implemented production-grade SaaS features including API key authentication, per-key rate limiting, usage tracking, and deployment on Render."
+    ],
+    github: "https://github.com/jtn11/resume-intelligence-api",
+    color: "from-indigo-500/20 to-transparent",
+    border: "group-hover:border-indigo-500/50"
+  },
+  {
+    title: "AI Summariser",
+    subtitle: "Browser Extension",
+    date: "Aug 2025",
+    tech: ["JavaScript", "Google Gemini API", "DOM Parsing", "Browser API"],
+    points: [
+      "Built a JavaScript browser extension that extracts active tab content and generates real-time, concise summaries using the Google Gemini API.",
+      "Engineered custom script injection and DOM parsing to interface seamlessly with modern LLM endpoints."
+    ],
+    github: "https://github.com/jtn11/AI-Summarizer",
+    color: "from-amber-500/20 to-transparent",
+    border: "group-hover:border-amber-500/50"
   }
 ];
 
@@ -103,7 +129,7 @@ const Projects = () => {
                     <h4 className="text-md text-blue-600 dark:text-blue-400 mt-1">{project.subtitle}</h4>
                   </div>
                   <div className="flex gap-4">
-                    <a href={project.github} className="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors p-2 bg-zinc-200 dark:bg-zinc-800/80 rounded-full hover:bg-zinc-300 dark:hover:bg-zinc-700 z-20">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors p-2 bg-zinc-200 dark:bg-zinc-800/80 rounded-full hover:bg-zinc-300 dark:hover:bg-zinc-700 z-20">
                       <Github className="w-5 h-5" />
                     </a>
                   </div>

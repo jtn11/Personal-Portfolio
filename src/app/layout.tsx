@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import BfcacheListener from "@/components/BfcacheListener";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -35,6 +36,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased bg-white dark:bg-black text-zinc-900 dark:text-white selection:bg-blue-200 dark:selection:bg-white/20 transition-colors duration-300`}
       >
         <ThemeProvider>
+          <BfcacheListener />
           {children}
         </ThemeProvider>
       </body>
