@@ -34,14 +34,11 @@ const Contact = () => {
               </div>
               
               <div className="flex gap-6 mt-8 pt-6 border-t border-zinc-200 dark:border-zinc-800">
-                <a href="#" className="flex items-center gap-2 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
+                <a href="https://www.linkedin.com/in/jatin-saini-214795257/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
                   LinkedIn <ExternalLink className="w-4 h-4"/>
                 </a>
-                <a href="#" className="flex items-center gap-2 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
+                <a href="https://github.com/jtn11" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
                   GitHub <ExternalLink className="w-4 h-4"/>
-                </a>
-                <a href="#" className="flex items-center gap-2 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
-                  Portfolio <ExternalLink className="w-4 h-4"/>
                 </a>
               </div>
             </div>
