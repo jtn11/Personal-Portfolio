@@ -115,27 +115,27 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="md:col-span-2 bg-gradient-to-br from-zinc-900 to-black dark:from-zinc-900 dark:to-black border border-zinc-800 rounded-3xl p-8 text-white relative overflow-hidden group shadow-lg"
+            className="md:col-span-2 bg-gradient-to-br from-indigo-50/50 to-white dark:from-zinc-900 dark:to-black border border-zinc-200 dark:border-zinc-800 rounded-3xl p-8 text-zinc-900 dark:text-white relative overflow-hidden group shadow-sm dark:shadow-lg"
           >
-            <div className="absolute right-0 bottom-0 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl -mr-20 -mb-20 transition-transform duration-700 group-hover:scale-110" />
+            <div className="absolute right-0 bottom-0 w-64 h-64 bg-indigo-500/10 dark:bg-indigo-500/20 rounded-full blur-3xl -mr-20 -mb-20 transition-transform duration-700 group-hover:scale-110" />
             
             <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 h-full">
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2 bg-indigo-500/20 rounded-lg">
-                    <Sparkles className="w-5 h-5 text-indigo-400" />
+                  <div className="p-2 bg-indigo-100 dark:bg-indigo-500/20 rounded-lg">
+                    <Sparkles className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
                   </div>
-                  <h3 className="text-xl font-bold text-white">Current Focus</h3>
+                  <h3 className="text-xl font-bold text-zinc-900 dark:text-white">Current Focus</h3>
                 </div>
-                <p className="text-zinc-400 text-lg">
+                <p className="text-zinc-600 dark:text-zinc-400 text-lg">
                   Deep diving into Advanced Prompt Engineering, Vector Databases, and building autonomous AI agents.
                 </p>
               </div>
               
               <div className="flex flex-wrap md:flex-col lg:flex-row gap-3">
-                <span className="px-5 py-2.5 rounded-xl bg-white/5 text-sm font-mono border border-white/10 backdrop-blur-sm shadow-xl shadow-black/20 text-indigo-200">RAG</span>
-                <span className="px-5 py-2.5 rounded-xl bg-white/5 text-sm font-mono border border-white/10 backdrop-blur-sm shadow-xl shadow-black/20 text-indigo-200">LLMs</span>
-                <span className="px-5 py-2.5 rounded-xl bg-white/5 text-sm font-mono border border-white/10 backdrop-blur-sm shadow-xl shadow-black/20 text-indigo-200">Next.js</span>
+                <span className="px-5 py-2.5 rounded-xl bg-white dark:bg-white/5 text-sm font-mono border border-zinc-200 dark:border-white/10 backdrop-blur-sm shadow-sm dark:shadow-xl dark:shadow-black/20 text-indigo-700 dark:text-indigo-200">RAG</span>
+                <span className="px-5 py-2.5 rounded-xl bg-white dark:bg-white/5 text-sm font-mono border border-zinc-200 dark:border-white/10 backdrop-blur-sm shadow-sm dark:shadow-xl dark:shadow-black/20 text-indigo-700 dark:text-indigo-200">LLMs</span>
+                <span className="px-5 py-2.5 rounded-xl bg-white dark:bg-white/5 text-sm font-mono border border-zinc-200 dark:border-white/10 backdrop-blur-sm shadow-sm dark:shadow-xl dark:shadow-black/20 text-indigo-700 dark:text-indigo-200">Next.js</span>
               </div>
             </div>
           </motion.div>
