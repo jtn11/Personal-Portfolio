@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useTheme } from 'next-themes';
-import { Sun, Moon } from 'lucide-react';
+import { Sun, Moon, Download } from 'lucide-react';
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
@@ -22,19 +22,30 @@ const Navbar = () => {
             <a href="#projects" className="hover:text-zinc-900 dark:hover:text-white transition-colors">Projects</a>
             <a href="#contact" className="hover:text-zinc-900 dark:hover:text-white transition-colors">Contact</a>
           </div>
-          {mounted && (
-            <button
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="p-2 rounded-full bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
-              aria-label="Toggle theme"
+          <div className="flex items-center gap-3 md:gap-4">
+            <a 
+              href="/resume.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center gap-2 px-3 py-2 md:px-4 text-sm font-medium rounded-full bg-zinc-900/5 dark:bg-white/10 hover:bg-zinc-900/10 dark:hover:bg-white/20 transition-colors text-zinc-900 dark:text-white border border-zinc-200 dark:border-zinc-800"
             >
-              {theme === 'dark' ? (
-                <Sun className="w-5 h-5 text-yellow-500" />
-              ) : (
-                <Moon className="w-5 h-5 text-zinc-700" />
-              )}
-            </button>
-          )}
+              <Download className="w-4 h-4" />
+              <span className="hidden sm:inline">Resume</span>
+            </a>
+            {mounted && (
+              <button
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                className="p-2 rounded-full bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
+                aria-label="Toggle theme"
+              >
+                {theme === 'dark' ? (
+                  <Sun className="w-5 h-5 text-yellow-500" />
+                ) : (
+                  <Moon className="w-5 h-5 text-zinc-700" />
+                )}
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </nav>
