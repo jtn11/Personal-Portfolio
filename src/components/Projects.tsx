@@ -9,10 +9,10 @@ const projects = [
     title: "TailorAI",
     subtitle: "Resume Analysis Platform",
     date: "Dec 2025 - Jan 2026",
-    tech: ["Next.js", "Node.js", "Firebase", "LLM API"],
+    tech: ["Next.js", "Node.js", "jSearch API" ,"Firebase", "LLM API"],
     points: [
-      "Built an AI-powered engine using Next.js and LLM APIs to evaluate resumes against job descriptions using structured JSON.",
-      "Developed a full-stack system utilizing Firebase Firestore for persistent analysis history and real-time UI updates."
+      "Engineered an AI career co-pilot using Next.js 15 and Groq LLM to parse PDFs and generate structured resume-to-job match evaluations.",
+      "Integrated jSearch RapidAPI for live job matching and utilized Firebase Firestore via serverless APIs to persist user analysis history."
     ],
     github: "https://github.com/jtn11/TailorAI",
     color: "from-blue-500/20 to-transparent",
