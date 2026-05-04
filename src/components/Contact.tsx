@@ -89,24 +89,24 @@ const Contact = () => {
           
           {/* Right Column: Clean Form */}
           <div className="bg-white dark:bg-zinc-900/50 p-8 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-sm dark:shadow-none">
-            <form className="space-y-6" onSubmit={handleSubmit}>
+            <form className="space-y-6" onSubmit={handleSubmit} suppressHydrationWarning>
               <div className="grid grid-cols-2 gap-6">
-                <div className="space-y-2">
+                <div className="space-y-2" suppressHydrationWarning>
                   <label className="text-sm font-medium text-zinc-500 dark:text-zinc-400">First Name</label>
                   <input required name="first_name" type="text" className="w-full bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-xl px-4 py-3 text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all" placeholder="John" />
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-2" suppressHydrationWarning>
                   <label className="text-sm font-medium text-zinc-500 dark:text-zinc-400">Last Name</label>
                   <input required name="last_name" type="text" className="w-full bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-xl px-4 py-3 text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all" placeholder="Doe" />
                 </div>
               </div>
               
-              <div className="space-y-2">
+              <div className="space-y-2" suppressHydrationWarning>
                 <label className="text-sm font-medium text-zinc-500 dark:text-zinc-400">Email Address</label>
                 <input required name="email" type="email" className="w-full bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-xl px-4 py-3 text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all" placeholder="name@domain.com" />
                 </div>
               
-              <div className="space-y-2">
+              <div className="space-y-2" suppressHydrationWarning>
                 <label className="text-sm font-medium text-zinc-500 dark:text-zinc-400">Message</label>
                 <textarea required name="message" rows={5} className="w-full bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-xl px-4 py-3 text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all resize-none" placeholder="How can we help you?"></textarea>
               </div>
